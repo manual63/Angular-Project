@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Angular Project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body ng-app="AngularProject">
+		<!-- Menu -->
+		<nav ng-controller="MenuController">
+			<ul>
+				<li ng-repeat="link in menuList">
+					<a href="#{{link.link}}">{{link.text}}</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- End Menu -->
+
+		<!-- Main content -->
+		<div ng-view></div>
+
+		<!-- Libs -->
+		<script src="js/libs/angular.min.js"></script>
+		<script src="js/libs/angular-route.min.js"></script>
+		<script src="js/libs/angular-resource.min.js"></script>
+
+		<!-- Project -->
+		<script src="js/AngularProject.js"></script>
+
+		<!-- Controllers -->
+		<script src="js/controllers/LandingController.js"></script>
+		<script src="js/controllers/AboutController.js"></script>
+		<script src="js/controllers/ErrorController.js"></script>
+		<script src="js/controllers/MenuController.js"></script>
+
+		<!-- Services -->
+		<script src="js/services/MenuService.js"></script>
+	</body>
+</html>
