@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body ng-app="AngularProject">
+		<!-- Menu -->
 		<nav ng-controller="MenuController">
 			<ul>
 				<li ng-repeat="link in menuList">
@@ -12,6 +13,9 @@
 				</li>
 			</ul>
 		</nav>
+		<!-- End Menu -->
+
+		<!-- Main content -->
 		<div ng-view></div>
 
 		<!-- Libs -->
@@ -30,6 +34,5 @@
 
 		<!-- Services -->
 		<script src="js/services/MenuService.js"></script>
-
 	</body>
 </html>
